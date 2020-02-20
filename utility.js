@@ -22,6 +22,8 @@ function addStudentEntryFunc(record){
         let student = JSON.parse(data);
         // add the record to the JSON array
         student.push(record);
+        // remove duplicate entries make sure registration number is unique
+        student = lodash.uniqBy(student, "RegNo");
         // write the data back into the JSON file
         let wdata = JSON.stringify(student, null, 2);
         fs.writeFile('data/students.json', wdata, (err) => {
@@ -39,6 +41,8 @@ function addCourseEntryFunc(record){
         // add the record to the JSON array
         let courses = JSON.parse(data);
         courses.push(record);
+        // remove duplicate courses - same course code
+        courses = lodash.uniqBy(courses,"Code");
         // write the updated array into the JSON file
         let wdata = JSON.stringify(courses, null, 2);
         fs.writeFile('data/courses.json', wdata, (err) => {
@@ -63,6 +67,8 @@ function addRegistrationStudentEntryFunc(record){
                 temp.Students.push(element);
             })
             // write back into the tempList
+            // remove duplicate students - same RegNo
+            temp.Students = lodash.uniqBy(temp.Students,"RegNo");
             let wdata = JSON.stringify(temp, null, 2);
             fs.writeFile('data/cache.json', wdata, (err) => {
                 if (err) throw err;
@@ -87,6 +93,8 @@ function addRegistrationCourseEntryFunc(record){
                 temp.Courses.push(element);
             })
             // write back into the tempList
+            // remove duplicate courses - same course code
+            temp.Courses = lodash.uniqBy(temp.Courses,"Code");
             let wdata = JSON.stringify(temp, null, 2);
             fs.writeFile('data/cache.json', wdata, (err) => {
                 if (err) throw err;
@@ -118,6 +126,8 @@ function addRegistrationEntryFunc(){
             entries.forEach( (element) =>{
                 registrations.push(element)
             })
+            // remove duplicate registrations 
+            registrations = lodash.uniqWith(registrations, lodash.isEqual);
             let wdata = JSON.stringify(registrations, null, 2);
             fs.writeFile('data/registrations.json',wdata,(err)=>{
                 if(err) throw err;

@@ -44,6 +44,7 @@ Similarly on clicking the course option the user is redirected to `/addCourse` w
 ### Registrations
 The registrations page `/addRegistrations` works differently from the student and course database page. It consist of a temporary list of students and courses which is on the left of the page. 
 * The user can add or delete from each temporary list in a similar manner as explained above. 
+* The user is added to the database only if they are not aldready registered.
 * Once satisfied with the temporary list the user can click the `add Registration` button on the bottom of the screen to register all the students to all the courses specified. Each student in the student temporary list is registered for each course in the course temporary list.
 
 ![Registration image](/screenshots/registrations1.PNG)

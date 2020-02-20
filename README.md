@@ -1,5 +1,5 @@
 # Courega
-A Course registration portal to be used by Administrators. The application was built using Nodejs, HTML, CSS, EJS as a templating language and uses JSON files as a database. It allows a user to manage a database of students, courses and the registrations of students. Additionally the user can also see the profile of an individual course or student, where all their detatils are mentioned.
+A Course registration portal to be used by Administrators. The application was built using Nodejs, HTML, CSS, EJS as a templating language and uses JSON files as a database. It allows a user to manage a database of students, courses and the registrations of students. Additionally the user can also see the profile of an individual course or student, where all their details are mentioned.
 
 ## Getting started
 ### Prerequisites
@@ -33,7 +33,7 @@ On clicking on the student option the user is redirected to `/addStudent` where 
 
 ![Image of Student database](/screenshots/students.PNG)
 
-* Add students - they can add students by filling the form and clicking add. New entries with the an aldready existing `RegNo` are not added.
+* Add students - they can add students by filling the form and clicking add. New entries with the an already existing `RegNo` are not added.
 * Search students - they can search students by filling any of the fields in the form and clicking search. Any students matching the description are displayed.
 * Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching the description are removed from the database. When a course or student get deleted all their enrolled registrations get deleted.
 
@@ -44,7 +44,7 @@ Similarly on clicking the course option the user is redirected to `/addCourse` w
 ### Registrations
 The registrations page `/addRegistrations` works differently from the student and course database page. It consist of a temporary list of students and courses which is on the left of the page. 
 * The user can add or delete from each temporary list in a similar manner as explained above. 
-* The user is added to the database only if they are not aldready registered.
+* The user is added to the database only if they are not already registered.
 * Once satisfied with the temporary list the user can click the `add Registration` button on the bottom of the screen to register all the students to all the courses specified. Each student in the student temporary list is registered for each course in the course temporary list.
 
 ![Registration image](/screenshots/registrations1.PNG)

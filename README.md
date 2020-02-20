@@ -31,8 +31,20 @@ Once opened you will be redirected to the homepage `/index`. From here you can c
 ### Student and Course Database
 On clicking on the student option the user is redirected to `/addStudent` where they can manage the student database
 
-![Image of Homepage](/screenshots/students.PNG)
+![Image of Student database](/screenshots/students.PNG)
 
 * Add students - they can add students by filling the form and clicking add.
 * Search students - they can search students by filling any of the fields in the form and clicking search. Any students matching the description are displayed.
 * Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching he description are removed from the database.
+
+Similarly on clicking the course option the user is redirected to `/addCourse` where they can manage the course database in a manner similar to that of the student database.
+
+![Image of Course database](/screenshots/courses.PNG)
+
+### Registrations
+The registrations page `/addRegistrations` works differently from the student and course database page. It consist of a temporary list of students and courses which is on the left of the page. 
+* The user can add or delete from each temporary list in a similar manner as explained above. 
+* Once satisfied with the tempList the user can click the `add Registration` button on the bottom of the screen to register all the students to all the courses specified. Each student in the student temporary list is registered for each course in the course temporary list.
+
+![Registration image](/screenshots/registrations1.PNG)
+![Registration image](/screenshots/registrations2.PNG)

@@ -49,6 +49,7 @@ The registrations page `/addRegistrations` works differently from the student an
 ![Registration image](/screenshots/registrations1.PNG)
 
 The user can then delete registrations using the form on the right. Any registrations matching the search query will be deleted.
+
 ![Registration image](/screenshots/registrations2.PNG)
 
 ### User and Course Profile

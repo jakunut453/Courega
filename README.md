@@ -35,7 +35,7 @@ On clicking on the student option the user is redirected to `/addStudent` where 
 
 * Add students - they can add students by filling the form and clicking add. New entries with the an aldready existing `RegNo` are not added.
 * Search students - they can search students by filling any of the fields in the form and clicking search. Any students matching the description are displayed.
-* Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching the description are removed from the database. When a course or student all their enrolled registrations get deleted.
+* Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching the description are removed from the database. When a course or student get deleted all their enrolled registrations get deleted.
 
 Similarly on clicking the course option the user is redirected to `/addCourse` where they can manage the course database in a manner similar to that of the student database.
 

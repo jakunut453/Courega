@@ -12,9 +12,9 @@ Once Nodejs is setup go to the directory where the files are present and run the
 * Modules - used exports to increase readability of code. functions are defined in `utility.js` which are used in `server.js`
 * Comments - Correct amount of comments are written to increase readability.
 * Files - used file read and writes to manage the database.
-* Lodash - The databases where stored as JSON arrays. Used Lodash to manipulate data and Add, Delete, Search entries.
+* Lodash - The databases are stored as JSON arrays. Used Lodash to manipulate data and Add, Delete, Search entries.
 * Express - To handle all GET and POST requests made to the Nodejs server.
-* Promises - Used promises to make code more concise and avoid callback hell.
+* Promises - Used promises to implement some functions.
 * Callback functions - To handle requests.
 * EJS - as the templating language for the views.
 * CSS - to improve the look of the application
@@ -35,7 +35,7 @@ On clicking on the student option the user is redirected to `/addStudent` where 
 
 * Add students - they can add students by filling the form and clicking add.
 * Search students - they can search students by filling any of the fields in the form and clicking search. Any students matching the description are displayed.
-* Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching he description are removed from the database.
+* Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching the description are removed from the database.
 
 Similarly on clicking the course option the user is redirected to `/addCourse` where they can manage the course database in a manner similar to that of the student database.
 
@@ -44,16 +44,16 @@ Similarly on clicking the course option the user is redirected to `/addCourse` w
 ### Registrations
 The registrations page `/addRegistrations` works differently from the student and course database page. It consist of a temporary list of students and courses which is on the left of the page. 
 * The user can add or delete from each temporary list in a similar manner as explained above. 
-* Once satisfied with the tempList the user can click the `add Registration` button on the bottom of the screen to register all the students to all the courses specified. Each student in the student temporary list is registered for each course in the course temporary list.
+* Once satisfied with the temporary list the user can click the `add Registration` button on the bottom of the screen to register all the students to all the courses specified. Each student in the student temporary list is registered for each course in the course temporary list.
 
 ![Registration image](/screenshots/registrations1.PNG)
 
-The user can then delete registrations using the form on the right. Any registrations matching the search query will be deleted.
+The user can then delete registrations using the form on the right. Any registrations matching the search query will be deleted from the registration database.
 
 ![Registration image](/screenshots/registrations2.PNG)
 
 ### User and Course Profile
-From the homepage the user can provide a registration number of a student or a course code to the profile of the particular item. All details will be displayed on the profile page for example a students profile has all the courses they have enrolled in. 
+From the homepage the user can provide a registration number of a student or a course code of a course to view the profile of the particular item. All details of the item will be displayed on the profile page. For example a students profile has all the courses they have enrolled in. 
 
 ![User Profile](/screenshots/userProfile.PNG)
 

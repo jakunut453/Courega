@@ -1,5 +1,5 @@
 # Courega
-A Course registration portal to be used by Administrators. The application was built using Nodejs, HTML, CSS, ejs as a templating language and uses JSON files as a database. It allows a user to manage a database of students, courses and the registrations of students. Additionally the user can also see the profile of an individual course or student, where all their detatils are mentioned.
+A Course registration portal to be used by Administrators. The application was built using Nodejs, HTML, CSS, EJS as a templating language and uses JSON files as a database. It allows a user to manage a database of students, courses and the registrations of students. Additionally the user can also see the profile of an individual course or student, where all their detatils are mentioned.
 
 ## Getting started
 ### Prerequisites
@@ -23,3 +23,5 @@ Once Nodejs is setup go to the directory where the files are present and run the
 
 To start the application go to directory and using a Terminal type the command `node server.js`. This command starts the server and makes it listen on port 3000. You can open the application by opening `http://localhost:3000/` in any browser.
 
+Once opened you will be redirected to the homepage `/index`. From here you can choose to manage a database or view a profile.
+![Image of Homepage]()

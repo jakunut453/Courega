@@ -9,7 +9,7 @@ Once Nodejs is setup go to the directory where the files are present and run the
 
 ## Nodejs Concepts used in making the application
 
-* Modules - used exports to increase readability of code.
+* Modules - used exports to increase readability of code. functions are defined in `utility.js` which are used in `server.js`
 * Comments - Correct amount of comments are written to increase readability.
 * Files - used file read and writes to manage the database.
 * Lodash - The databases where stored as JSON arrays. Used Lodash to manipulate data and Add, Delete, Search entries.
@@ -50,3 +50,12 @@ The registrations page `/addRegistrations` works differently from the student an
 
 The user can then delete registrations using the form on the right. Any registrations matching the search query will be deleted.
 ![Registration image](/screenshots/registrations2.PNG)
+
+### User and Course Profile
+From the homepage the user can provide a registration number of a student or a course code to the profile of the particular item. All details will be displayed on the profile page for example a students profile has all the courses they have enrolled in. 
+
+![User Profile](/screenshots/userProfile.PNG)
+
+From here the user can choose to view a different profile or go back.
+
+![Course Profile](/screenshots/courseProfile.PNG)

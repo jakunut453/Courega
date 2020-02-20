@@ -23,5 +23,5 @@ Once Nodejs is setup go to the directory where the files are present and run the
 
 To start the application go to directory and using a Terminal type the command `node server.js`. This command starts the server and makes it listen on port 3000. You can open the application by opening `http://localhost:3000/` in any browser.
 
-Once opened you will be redirected to the homepage `/index`. From here you can choose to manage a database or view a profile.
-![Image of Homepage]()
+Once opened you will be redirected to the homepage `/index`. From here you can choose to manage a database by clicking on any of the buttons, or view a profile by entering a registration number, course code in the search bar.
+![Image of Homepage](/screenshots/homePage.PNG)

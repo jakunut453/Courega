@@ -47,4 +47,6 @@ The registrations page `/addRegistrations` works differently from the student an
 * Once satisfied with the tempList the user can click the `add Registration` button on the bottom of the screen to register all the students to all the courses specified. Each student in the student temporary list is registered for each course in the course temporary list.
 
 ![Registration image](/screenshots/registrations1.PNG)
+
+The user can then delete registrations using the form on the right. Any registrations matching the search query will be deleted.
 ![Registration image](/screenshots/registrations2.PNG)

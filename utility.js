@@ -145,42 +145,6 @@ function addRegistrationEntryFunc(){
     })
 }
 
-// delete students from the student database
-function deleteStudentEntryFunc(record){
-    // read the student database
-    fs.readFile('data/students.json', (err, data) => {
-        if (err) throw err;
-        let student = JSON.parse(data);
-        record = removeEmptyValueFunc(record);
-        // remove the students matching the search parameters
-        lodash.remove(student,record);
-        // write back into the student database
-        let wdata = JSON.stringify(student, null, 2);
-        fs.writeFile('data/students.json', wdata, (err) => {
-            if (err) throw err;
-            console.log('student of type'+JSON.stringify(record)+' removed from database');
-        });
-    });
-}
-
-// delete courses from the course database based on search parameters
-function deleteCourseEntryFunc(record){
-    // read the course database
-    fs.readFile('data/courses.json', (err, data) => {
-        if (err) throw err;
-        // stored as a JSON array
-        let courses = JSON.parse(data);
-        record = removeEmptyValueFunc(record);
-        // remove entries matching the 
-        lodash.remove(courses,record);
-        let wdata = JSON.stringify(courses, null, 2);
-        fs.writeFile('data/courses.json', wdata, (err) => {
-            if (err) throw err;
-            console.log('Course of type'+JSON.stringify(record)+' removed from database');
-        });
-    });
-}
-
 // delete matching students from the students tempList
 function deleteRegistrationStudentEntryFunc(record){ 
     fs.readFile('data/cache.json', (err, data) => {
@@ -229,6 +193,50 @@ function deleteRegistrationEntryFunc(record){
         fs.writeFile('data/registrations.json', wdata, (err) => {
             if (err) throw err;
             console.log('Registration of type'+JSON.stringify(record)+' removed from database');
+        });
+    });
+}
+
+// delete students from the student database
+function deleteStudentEntryFunc(record){
+    // read the student database
+    fs.readFile('data/students.json', (err, data) => {
+        if (err) throw err;
+        let student = JSON.parse(data);
+        record = removeEmptyValueFunc(record);
+        // remove the students matching the search parameters
+        var removed = lodash.remove(student,record);
+        // remove all registrations of removed students
+        removed.forEach((element) => {
+            deleteRegistrationEntryFunc({"RegNo":element.RegNo});
+        })
+        // write back into the student database
+        let wdata = JSON.stringify(student, null, 2);
+        fs.writeFile('data/students.json', wdata, (err) => {
+            if (err) throw err;
+            console.log('student of type'+JSON.stringify(record)+' removed from database');
+        });
+    });
+}
+
+// delete courses from the course database based on search parameters
+function deleteCourseEntryFunc(record){
+    // read the course database
+    fs.readFile('data/courses.json', (err, data) => {
+        if (err) throw err;
+        // stored as a JSON array
+        let courses = JSON.parse(data);
+        record = removeEmptyValueFunc(record);
+        // remove entries matching the 
+        var removed = lodash.remove(courses,record);
+        // remove all registrations of removed students
+        removed.forEach((element) => {
+            deleteRegistrationEntryFunc({"Code":element.Code});
+        })
+        let wdata = JSON.stringify(courses, null, 2);
+        fs.writeFile('data/courses.json', wdata, (err) => {
+            if (err) throw err;
+            console.log('Course of type'+JSON.stringify(record)+' removed from database');
         });
     });
 }

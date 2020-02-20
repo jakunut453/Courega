@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "Foundations to Computer Systems Design",
+    "Code": "cs34",
+    "Branch": "CSE",
+    "Faculty": "Prof. Kamakoti Veezhinathan"
+  },
+  {
+    "Name": "Operating System",
+    "Code": "cs04",
+    "Branch": "CSE",
+    "Faculty": "Prof. Sorav Bansal"
+  },
+  {
+    "Name": "Optical Engineering",
+    "Code": "ee48",
+    "Branch": "EEE",
+    "Faculty": "Prof. Shanti Bhattacharya"
+  }
+]

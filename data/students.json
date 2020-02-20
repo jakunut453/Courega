@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "Nishit",
+    "RegNo": "17BCE1024",
+    "Branch": "CSE",
+    "CGPA": "8"
+  },
+  {
+    "Name": "Anurag",
+    "RegNo": "17BME1020",
+    "Branch": "MECH",
+    "CGPA": "8"
+  },
+  {
+    "Name": "Ashutosh",
+    "RegNo": "17BEE1032",
+    "Branch": "EEE",
+    "CGPA": "8"
+  },
+  {
+    "Name": "Mridul",
+    "RegNo": "17BCE1259",
+    "Branch": "CSE",
+    "CGPA": "7"
+  },
+  {
+    "Name": "Ashish",
+    "RegNo": "17BME1201",
+    "Branch": "MECH",
+    "CGPA": "7"
+  },
+  {
+    "Name": "Surya",
+    "RegNo": "17BCE1014",
+    "Branch": "CSE",
+    "CGPA": "9"
+  }
+]

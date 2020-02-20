@@ -12,7 +12,7 @@ Once Nodejs is setup go to the directory where the files are present and run the
 * Modules - used exports to increase readability of code. functions are defined in `utility.js` which are used in `server.js`
 * Comments - Correct amount of comments are written to increase readability.
 * Files - used file read and writes to manage the database.
-* Lodash - The databases are stored as JSON arrays. Used Lodash to manipulate data and Add, Delete, Search entries.
+* Lodash - The databases are stored as JSON arrays. Used Lodash to manipulate data and Add, Delete, Search entries. Also used to prevent duplicate entries in the database.
 * Express - To handle all GET and POST requests made to the Nodejs server.
 * Promises - Used promises to implement some functions.
 * Callback functions - To handle requests.
@@ -33,7 +33,7 @@ On clicking on the student option the user is redirected to `/addStudent` where 
 
 ![Image of Student database](/screenshots/students.PNG)
 
-* Add students - they can add students by filling the form and clicking add.
+* Add students - they can add students by filling the form and clicking add. New entries with the an aldready existing `RegNo` are not added.
 * Search students - they can search students by filling any of the fields in the form and clicking search. Any students matching the description are displayed.
 * Delete students - they can delete students by filling any of the fields and clicking the delete button. Any students matching the description are removed from the database.
 
